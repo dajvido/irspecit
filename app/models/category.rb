@@ -14,5 +14,7 @@ class Category < ActiveRecord::Base
   belongs_to :user
   belongs_to :catalog
 
+  has_many :tasks, dependent: :destroy
+
   validates :name, presence: true
 end

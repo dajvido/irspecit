@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :catalogs
-  has_many :categories
+  has_many :catalogs, dependent: :destroy
+  has_many :categories, dependent: :destroy
 
 
   validates :name, :surname, :birth_date, presence: true

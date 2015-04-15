@@ -17,4 +17,6 @@ RSpec.describe Category, type: :model do
   it { should belong_to(:catalog) }
 
   it { should validate_presence_of(:name) }
+
+  it { should have_many(:tasks).dependent(:destroy) }
 end
