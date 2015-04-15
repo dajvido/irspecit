@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Use annotate
+gem 'annotate'
 # Use codeclimate
 gem 'codeclimate-test-reporter', group: :test, require: nil
 # Use haml
