@@ -1,8 +1,11 @@
 language: ruby
 rvm:
   - 2.2.0
-before_script:
-  - "echo \"Irspecit::Application.config.secret_key_base = '$(bundle exec rake secret)'\" > config/initializers/secret_token.rb"
 addons:
   code_climate:
     repo_token: 2d1aa107092041b693bbee00a929dd81054e7211445cbf8e01f0709f9006a729
+
+before_script:
+  - "echo \"Irspecit::Application.config.secret_key_base = '$(bundle exec rake secret)'\" > config/initializers/secret_token.rb"
+
+script: "bundle install && rake db:drop db:create db:migrate && bundle exec rake"
