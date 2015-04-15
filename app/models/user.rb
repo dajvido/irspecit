@@ -27,6 +27,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :catalogs
+  has_many :categories
+
 
   validates :name, :surname, :birth_date, presence: true
 end

@@ -1,18 +1,18 @@
 # == Schema Information
 #
-# Table name: catalogs
+# Table name: categories
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  user_id    :integer
+#  catalog_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
 #
 
 require 'rails_helper'
 
-RSpec.describe Catalog, type: :model do
+RSpec.describe Category, type: :model do
   it { should belong_to(:user) }
-  it { should have_many(:categories) }
-  it { should validate_presence_of(:name) }
+  it { should belong_to(:catalog) }
 end

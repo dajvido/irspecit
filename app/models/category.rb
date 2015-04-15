@@ -1,18 +1,16 @@
 # == Schema Information
 #
-# Table name: catalogs
+# Table name: categories
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  user_id    :integer
+#  catalog_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
 #
 
-class Catalog < ActiveRecord::Base
+class Category < ActiveRecord::Base
   belongs_to :user
-
-  has_many :categories
-
-  validates :name, presence: true
+  belongs_to :catalog
 end

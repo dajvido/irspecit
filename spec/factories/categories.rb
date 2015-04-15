@@ -1,18 +1,20 @@
 # == Schema Information
 #
-# Table name: catalogs
+# Table name: categories
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  user_id    :integer
+#  catalog_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
 #
 
-class Catalog < ActiveRecord::Base
-  belongs_to :user
+FactoryGirl.define do
+  factory :category do
+    name "MyString"
+user nil
+catalog nil
+  end
 
-  has_many :categories
-
-  validates :name, presence: true
 end

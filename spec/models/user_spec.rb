@@ -23,8 +23,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-
   it { should validate_presence_of(:email) }
   it { should validate_presence_of(:password) }
   it { should validate_presence_of(:name) }
@@ -32,4 +30,5 @@ RSpec.describe User, type: :model do
   it { should validate_presence_of(:birth_date) }
 
   it { should have_many(:catalogs) }
+  it { should have_many(:categories) }
 end
