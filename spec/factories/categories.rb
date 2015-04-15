@@ -11,10 +11,10 @@
 #
 
 FactoryGirl.define do
-  factory :category do
+    factory :category do
     name "MyString"
-user nil
-catalog nil
+    user
+    catalog nil
   end
 
 end
