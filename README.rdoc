@@ -1,7 +1,7 @@
 == IrespecIT
 
+{<img src="https://travis-ci.org/dajvido/irspecit.svg" alt="Build Status" />}[https://travis-ci.org/dajvido/irspecit]
 {<img src="https://codeclimate.com/github/dajvido/irspecit/badges/gpa.svg" />}[https://codeclimate.com/github/dajvido/irspecit]
 {<img src="https://codeclimate.com/github/dajvido/irspecit/badges/coverage.svg" />}[https://codeclimate.com/github/dajvido/irspecit]
-{<img src="https://travis-ci.org/dajvido/irspecit.svg" alt="Build Status" />}[https://travis-ci.org/dajvido/irspecit]
 
 This is a playtime with rails learning a bit of BDD with rspec.
