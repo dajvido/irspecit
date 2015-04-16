@@ -46,6 +46,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'rspec-rails'
+  gem 'simplecov', require: false
   gem 'shoulda'
   gem 'faker'
   gem 'factory_girl_rails'
